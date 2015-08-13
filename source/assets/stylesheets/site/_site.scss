@@ -11,7 +11,7 @@
 .site-header {
   position: relative;
 	@include clearfix;
-	background-color: #EFE8D5;
+	background-color: #dbddb6;
 }
 
 .site-main {
@@ -34,4 +34,100 @@
 h1, h2, h3,
 h4, h5, h6 {
   line-height: 1; // Set line-height smaller on larger fonts
+}
+// ------------------------------------------------------------
+// Hero Image
+// ------------------------------------------------------------
+.hero {  
+  $base-border-radius: 3px !default;
+  $action-color: #477DCA !default;
+  $large-screen: em(860) !default;
+  $hero-background-top: #7F99BE; 
+  $hero-background-bottom: #20392B;
+  $hero-color: white;
+  $gradient-angle: 10deg;
+  $hero-image: '../images/wondergiant-masthead.jpg';
+
+  @include background(url($hero-image), linear-gradient($gradient-angle, $hero-background-bottom, $hero-background-top), no-repeat $hero-background-top scroll);
+  background-color: #324766;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 3em;
+  color: #fff;
+  padding-top: 110px;
+  min-height: 500px;
+  letter-spacing: 2px;
+  font-family: "Montserrat", sans-serif;
+
+
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    margin: auto;
+    padding: 3.5em;
+    text-align: center;
+
+    .hero-copy {
+      text-align: center;
+      h1 {
+    font-size: 50px;
+    line-height: 1.3;
+    
+    span {
+      font-size: 25px;
+      color: #d8d9af;
+      border-bottom: 2px solid #d8d9af;
+      padding-bottom: 12px;
+      line-height: 3;
+    }
+  }
+      
+      h1 {
+        color: #d8d9af;
+        font-size: 1.6em;
+        margin-bottom: 0.5em;
+
+        @include media($large-screen) {
+          font-size: 1.8em;
+        }
+      }
+
+      p {
+        color: $hero-color;
+        line-height: 1.4em;
+        margin: 0 auto 3em auto; 
+
+        @include media($large-screen) {
+          font-size: 1.1em;
+          max-width: 40%;
+        }
+      }
+    }
+  }
+}
+// ------------------------------------------------------------
+// Intro content
+// ------------------------------------------------------------
+.intro {
+    text-align: center;
+    p {
+    @include media($large-screen) {
+      font-size: 1.6em;
+      font-weight: 400;
+      margin: 0 auto 1em;
+      text-align: center;
+    }
+  }
+}
+.btn {
+  background: #d8544b;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.7em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 10px;
+  text-transform: uppercase;
+  text-align: center;
 }

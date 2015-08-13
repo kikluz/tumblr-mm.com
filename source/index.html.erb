@@ -1,14 +1,26 @@
 ---
 title: Middleman is Loaded
 ---
+<% content_for :hero do %>
+	<div class="hero">
+	    <div class="hero-inner">
+	        <div class="hero-copy">
+	            <h1><span>S W</span><br>Designs.</h1>
+	        </div>
+	        <div class="mouse">
+	            <span></span>
+	        </div> 
+	    </div>
+	</div>
+<% end %>
 
-<h1>Middleman is Loaded</h1>
-<%= image_tag 'mm-logo.png' %>
 
-<h2>What's New</h2>
+<div class="intro">
 
-<p>Changed icon font library to <a href="http://fortawesome.github.io/Font-Awesome/icons/">Font Awesome</a></p>
+	<p>Webknit is a small design studio based in the UK. We specialise in the design and implementation of great looking &amp; highly functional websites.</p>
+	
+	<a class="btn" href="/">Find out more</a>
 
-<i class="fa fa-1x fa-flash"></i>
-<i class="fa fa-2x fa-flash"></i>
-<i class="fa fa-3x fa-flash"></i>
+</div>
+
+
